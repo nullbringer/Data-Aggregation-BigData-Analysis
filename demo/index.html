@@ -23,6 +23,16 @@
 	<script src="../../../../global_assets/js/plugins/ui/ripple.min.js"></script>
 	<!-- /core JS files -->
 
+	<!-- D3 library -->
+	<script src="../../../../global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+	<!-- Load library -->
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+
+	<!-- Load tooltip -->
+	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/charts/d3/tree/tree_radial.js"></script>
+	<script src="../../../../global_assets/js/demo_pages/widgets_stats.js"></script>
+
 	<!-- Theme JS files -->
 	<script src="assets/js/app.js"></script>
 	<!-- /theme JS files -->
@@ -79,51 +89,19 @@
 					</a>
 				</li>
 
-				<li class="nav-item">
-					<a href="#" class="navbar-nav-link">Text link</a>
-				</li>
-
-				<li class="nav-item dropdown">
-					<a href="#" class="navbar-nav-link dropdown-toggle" data-toggle="dropdown">Menu</a>
-
-					<div class="dropdown-menu">
-						<a href="#" class="dropdown-item">Action</a>
-						<a href="#" class="dropdown-item">Another action</a>
-						<a href="#" class="dropdown-item">One more action</a>
-						<div class="dropdown-divider"></div>
-						<a href="#" class="dropdown-item">Separate action</a>
-					</div>
-				</li>
+			
 			</ul>
 
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a href="#" class="navbar-nav-link">Text link</a>
+					
+
+					<button type="button" class="btn btn-success btn-labeled btn-labeled-left btn-sm"><b><i class="icon-book"></i></b> Documentation</button>
+
+
+
 				</li>
 
-				<li class="nav-item dropdown">
-					<a href="#" class="navbar-nav-link">
-						<i class="icon-bell2"></i>
-						<span class="d-md-none ml-2">Notifications</span>
-						<span class="badge badge-mark border-white"></span>
-					</a>					
-				</li>
-
-				<li class="nav-item dropdown dropdown-user">
-					<a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
-						<img src="../../../../global_assets/images/image.png" class="rounded-circle mr-2" height="34" alt="">
-						<span>Victoria</span>
-					</a>
-
-					<div class="dropdown-menu dropdown-menu-right">
-						<a href="#" class="dropdown-item"><i class="icon-user-plus"></i> My profile</a>
-						<a href="#" class="dropdown-item"><i class="icon-coins"></i> My balance</a>
-						<a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
-						<div class="dropdown-divider"></div>
-						<a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a>
-						<a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
-					</div>
-				</li>
 			</ul>
 		</div>
 		<!-- /navbar content -->
@@ -263,12 +241,12 @@
 			<div class="page-header">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Starters</span> - Fixed Layout</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Dashboard</span></h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
 					<div class="header-elements d-none text-center text-md-left mb-3 mb-md-0">
-						<a href="#" class="btn btn-labeled btn-labeled-right bg-primary">Button <b><i class="icon-menu7"></i></b></a>
+						
 					</div>
 				</div>
 			</div>
@@ -277,211 +255,147 @@
 
 			<!-- Content area -->
 			<div class="content pt-0">
-
-				<!-- Basic card -->
-				<div class="card">
-					<div class="card-header header-elements-inline">
-						<h5 class="card-title">Basic card</h5>
-						<div class="header-elements">
-							<div class="list-icons">
-		                		<a class="list-icons-item" data-action="collapse"></a>
-		                		<a class="list-icons-item" data-action="reload"></a>
-		                		<a class="list-icons-item" data-action="remove"></a>
-		                	</div>
-	                	</div>
-					</div>
-
-					<div class="card-body">
-						<h6 class="font-weight-semibold">Start your development with no hassle!</h6>
-						<p class="mb-3">Common problem of templates is that all code is deeply integrated into the core. This limits your freedom in decreasing amount of code, i.e. it becomes pretty difficult to remove unnecessary code from the project. Limitless allows you to remove unnecessary and extra code easily just by removing the path to specific LESS file with component styling. All plugins and their options are also in separate files. Use only components you actually need!</p>
-
-						<h6 class="font-weight-semibold">What is this?</h6>
-						<p class="mb-3">Starter kit is a set of pages, useful for developers to start development process from scratch. Each layout includes base components only: layout, page kits, color system which is still optional, bootstrap files and bootstrap overrides. No extra CSS/JS files and markup. CSS files are compiled without any plugins or components. Starter kit was moved to a separate folder for better accessibility.</p>
-
-						<h6 class="font-weight-semibold">How does it work?</h6>
-						<p>You open one of the starter pages, add necessary plugins, uncomment paths to files in components.less file, compile new CSS. That's it. I'd also recommend to open one of main pages with functionality you need and copy all paths/JS code from there to your new page, it's just faster and easier.</p>
-					</div>
-				</div>
-				<!-- /basic card -->
-
-
-				<!-- Basic table -->
-				<div class="card">
-					<div class="card-header header-elements-inline">
-						<h5 class="card-title">Basic table</h5>
-						<div class="header-elements">
-							<div class="list-icons">
-		                		<a class="list-icons-item" data-action="collapse"></a>
-		                		<a class="list-icons-item" data-action="reload"></a>
-		                		<a class="list-icons-item" data-action="remove"></a>
-		                	</div>
-	                	</div>
-					</div>
-
-					<div class="card-body">
-						Seed project includes the most basic components that can help you in development process - basic grid example, card, table and form layouts with standard components. Nothing extra. Easily turn on and off styles of different components in <code>_config.scss</code> file so that your CSS is always as clean as possible. Bootstrap components are always enabled though.
-					</div>
-
-					<div class="table-responsive">
-						<table class="table">
-							<thead>
-								<tr>
-									<th>#</th>
-									<th>First Name</th>
-									<th>Last Name</th>
-									<th>Username</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>1</td>
-									<td>Eugene</td>
-									<td>Kopyov</td>
-									<td>@Kopyov</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>Victoria</td>
-									<td>Baker</td>
-									<td>@Vicky</td>
-								</tr>
-								<tr>
-									<td>3</td>
-									<td>James</td>
-									<td>Alexander</td>
-									<td>@Alex</td>
-								</tr>
-								<tr>
-									<td>4</td>
-									<td>Franklin</td>
-									<td>Morrison</td>
-									<td>@Frank</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<!-- /basic table -->
-
-
-				<!-- Form layouts -->
 				<div class="row">
-					<div class="col-md-6">
+					<div class="col-xl-6">
+						<div class="row">
 
-						<!-- Horizontal form -->
-						<div class="card">
-							<div class="card-header header-elements-inline">
-								<h5 class="card-title">Horizontal form</h5>
-								<div class="header-elements">
-									<div class="list-icons">
-				                		<a class="list-icons-item" data-action="collapse"></a>
-				                		<a class="list-icons-item" data-action="reload"></a>
-				                		<a class="list-icons-item" data-action="remove"></a>
+							<div class="col-sm-6 col-xl-4">
+
+								<!-- Sparklines in colored card -->
+								<div class="card bg-success-400 has-bg-image">
+									<div class="card-body">
+										<div class="d-flex">
+											<h3 class="font-weight-semibold mb-0">1,253</h3>
+											
+					                	</div>
+					                	
+					                	<div>
+											Articles Collected
+											<div class="font-size-sm opacity-75">http://commoncrawl.org</div>
+										</div>
+									</div>
+
+									<div id="sparklines_color"></div>
+								</div>
+								<!-- /sparklines in colored card -->
+
+							</div>
+
+						<div class="col-sm-6 col-xl-4">
+
+							<!-- Bar chart in colored card -->
+							<div class="card bg-danger-400 has-bg-image">
+								<div class="card-body">
+									<div class="d-flex">
+										<h3 class="font-weight-semibold mb-0">3,450</h3>
 				                	</div>
-			                	</div>
-		                	</div>
-
-							<div class="card-body">
-								<form action="#">
-									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Text input</label>
-										<div class="col-lg-9">
-											<input type="text" class="form-control">
-										</div>
+				                	
+				                	<div>
+										Articles Collected
+										<div class="font-size-sm opacity-75">https://nytimes.com</div>
 									</div>
+								</div>
 
-									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Password</label>
-										<div class="col-lg-9">
-											<input type="password" class="form-control">
-										</div>
+								<div class="container-fluid">
+									<div id="chart_bar_color"></div>
+								</div>
+							</div>
+							<!-- /bar chart in colored card -->
+
+						</div>
+
+						<div class="col-sm-6 col-xl-4">
+
+							<!-- Line chart in colored card -->
+							<div class="card bg-blue-400 has-bg-image">
+								<div class="card-body">
+									<div class="d-flex">
+										<h3 class="font-weight-semibold mb-0">44,389</h3>
+
+				                	</div>
+				                	
+				                	<div>
+										Tweets Collected
+										<div class="font-size-sm opacity-75">http://twitter.com</div>
 									</div>
+								</div>
 
-			                        <div class="form-group row">
-			                        	<label class="col-lg-3 col-form-label">Select</label>
-			                        	<div class="col-lg-9">
-				                            <select name="select" class="form-control">
-				                                <option value="opt1">Basic select</option>
-				                                <option value="opt2">Option 2</option>
-				                                <option value="opt3">Option 3</option>
-				                                <option value="opt4">Option 4</option>
-				                                <option value="opt5">Option 5</option>
-				                                <option value="opt6">Option 6</option>
-				                                <option value="opt7">Option 7</option>
-				                                <option value="opt8">Option 8</option>
-				                            </select>
-			                            </div>
-			                        </div>
+								<div id="line_chart_color"></div>
+							</div>
+							<!-- /line chart in colored card -->
 
-									<div class="form-group row">
-										<label class="col-lg-3 col-form-label">Textarea</label>
-										<div class="col-lg-9">
-											<textarea rows="5" cols="5" class="form-control" placeholder="Default textarea"></textarea>
-										</div>
-									</div>
+						</div>
 
-									<div class="text-right">
-										<button type="submit" class="btn btn-primary">Submit form <i class="icon-paperplane ml-2"></i></button>
-									</div>
-								</form>
+					
+
+					</div>
+					<div class="row">
+
+
+						<!-- Simple inline block with icon and button -->
+						<div class="card card-body bg-pink-400" style="background-image: url(../../../../global_assets/images/backgrounds/panel_bg.png);">
+							<div class="media align-items-center align-items-md-start flex-column flex-md-row">
+								<a href="#" class="text-white mr-md-3 mb-3 mb-md-0">
+									<i class="icon-question7 text-white-400 border-white-400 border-2 rounded-round p-2"></i>
+								</a>
+
+								<div class="media-body text-center text-md-left">
+									<h6 class="media-title font-weight-semibold">How did we process data?</h6>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam erat libero, iaculis a aliquam a, luctus non felis. Donec laoreet, lorem ipsum dolor sit consectetur adipiscing elit.
+								</div>
+
 							</div>
 						</div>
-						<!-- /horizotal form -->
+						<!-- /simple inline block with icon and button -->
+
+
+
+
+					</div>
+				
+					</div>
+					<div class="col-xl-6">
+							
+								<!-- Top placement -->
+								<div class="card">
+									<div class="embed-responsive embed-responsive-16by9 card-img-top">
+										<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/317169901?title=0&byline=0&portrait=0" allowfullscreen frameborder="0" mozallowfullscreen></iframe>
+									</div>
+
+								</div>
+								<!-- /top placement -->
 
 					</div>
 
-					<div class="col-md-6">
 
-						<!-- Vertical form -->
-						<div class="card">
-							<div class="card-header header-elements-inline">
-								<h5 class="card-title">Vertical form</h5>
-								<div class="header-elements">
-									<div class="list-icons">
-				                		<a class="list-icons-item" data-action="collapse"></a>
-				                		<a class="list-icons-item" data-action="reload"></a>
-				                		<a class="list-icons-item" data-action="remove"></a>
-				                	</div>
-			                	</div>
+			<!-- Radial tree layout -->
+				<div class="card">
+					<div class="card-header header-elements-inline">
+						<h5 class="card-title">Radial tree layout</h5>
+						<div class="header-elements">
+							<div class="list-icons">
+		                		<a class="list-icons-item" data-action="collapse"></a>
+		                		<a class="list-icons-item" data-action="reload"></a>
+		                		<a class="list-icons-item" data-action="remove"></a>
 		                	</div>
+	                	</div>
+					</div>
 
-							<div class="card-body">
-								<form action="#">
-									<div class="form-group">
-										<label>Text input</label>
-										<input type="text" class="form-control">
-									</div>
+					<div class="card-body">
+						<p>Example of basic <code>tree</code> layout in <code>radial</code> orientation. The tree layout implements the <code>Reingold-Tilford</code> algorithm for efficient, tidy arrangement of layered nodes. The depth of nodes is computed by distance from the root, leading to a ragged appearance. Demo data is stored in <code>json</code> file format. By default, the tree isn't scalable and has fixed width for better readability, all levels are visible. The layout supports custom styling via CSS.</p>
 
-			                        <div class="form-group">
-			                        	<label>Select</label>
-			                            <select name="select" class="form-control">
-			                                <option value="opt1">Basic select</option>
-			                                <option value="opt2">Option 2</option>
-			                                <option value="opt3">Option 3</option>
-			                                <option value="opt4">Option 4</option>
-			                                <option value="opt5">Option 5</option>
-			                                <option value="opt6">Option 6</option>
-			                                <option value="opt7">Option 7</option>
-			                                <option value="opt8">Option 8</option>
-			                            </select>
-			                        </div>
-
-									<div class="form-group">
-										<label>Textarea</label>
-										<textarea rows="4" cols="4" class="form-control" placeholder="Default textarea"></textarea>
-									</div>
-
-									<div class="text-right">
-										<button type="submit" class="btn btn-primary">Submit form <i class="icon-paperplane ml-2"></i></button>
-									</div>
-								</form>
-							</div>
+						<div class="chart-container has-scroll">
+							<div class="chart svg-center" id="d3-tree-radial"></div>
 						</div>
-						<!-- /vertical form -->
-
 					</div>
 				</div>
-				<!-- /form layouts -->
+				<!-- /radial tree layout -->
+
+
+
+		</div>
+
+
 
 			</div>
 			<!-- /content area -->
@@ -500,7 +414,6 @@
 					<span class="navbar-text">
 						&copy; 2019. <a href="https://cse.buffalo.edu/~bina/cse487/spring2019/">Data Intensive Computing Lab 2</a> by <a href="https://github.com/urbangeek" target="_blank">Amlan Gupta</a> &amp; <a href="https://github.com/AtrayeeNag" target="_blank">Atrayee Nag</a>
 					</span>
-
 
 				</div>
 			</div>
