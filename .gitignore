@@ -47,3 +47,4 @@ Thumbs.db
 *.Rproj.user
 *.RData
 *.Rhistory
+.Rproj.user

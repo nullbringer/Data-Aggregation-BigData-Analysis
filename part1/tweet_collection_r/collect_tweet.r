@@ -22,14 +22,16 @@ create_token(
   access_token = "28061753-gaJ3U57jvxl3bAMOOhXkXcZbVygvDbeCtBAMlveTJ",
   access_secret = "l9kAOaSAlFKZQEO3yJA9M7EaDXMfVay59Rrv0LciKcUs8")
 
-#q <- '\"Hindu\" OR \"Hinduism\" OR \"Iskcon\" OR \"Krishna\" '
+q <- '\"Google\" OR \"gmail\" OR \"youtube\" OR \"adsense\" '
 
-#q <- '\"Islam\" OR \"Muslim\" OR \"Mecca\" OR \"Quran\" '
+#q <- '\"amazon\" OR \"kindle\" OR \"Alexa\" OR \"Bezos\" OR \"Audible\" OR \"twitch\" OR \"imdb\"'
 
-#q <- '\"Judaism\" OR \"Torah\" OR \"Jew\" OR \"Jewish\" OR \"Rabbi\" OR \"Tanakh\" OR \"Hanukkah\" '
+#q <- '\"facebook\" OR \"Instagram\" OR \"WhatsApp\" OR \"Oculus\"  OR \"Zuckerberg\" '
 
-#q <- '\"Christian\" OR \"Christianity\" OR \"Bible\" OR \"Christ\" OR \"Church\" OR \"Vatican\" OR \"Baptism\" OR \"Mormont\" OR \"Catholic\" OR \"Protestant\" '
 
+#q <- '\"iphone\" OR \"ipad\" OR \"ipod\" OR \"steve jobs\" OR \"itunes\" OR \"siri\" OR \"apple watch\" '
+
+#q <- '\"uber\" '
 
 
 rt <- search_tweets(
@@ -46,9 +48,6 @@ rt <- search_tweets(
 print(nrow(rt))
 
 
-#save_as_csv(rt, "data_files/1.csv", prepend_ids = TRUE, na = "",fileEncoding = "UTF-8")
-#save_as_csv(rt, "data_files/2.csv", prepend_ids = TRUE, na = "",fileEncoding = "UTF-8")
-#save_as_csv(rt, "data_files/3.csv", prepend_ids = TRUE, na = "",fileEncoding = "UTF-8")
-save_as_csv(rt, "data_files/4.csv", prepend_ids = TRUE, na = "",fileEncoding = "UTF-8")
+save_as_csv(rt, "../data_files/twitter/google.csv", prepend_ids = TRUE, na = "",fileEncoding = "UTF-8")
 
-print(rt)
+
