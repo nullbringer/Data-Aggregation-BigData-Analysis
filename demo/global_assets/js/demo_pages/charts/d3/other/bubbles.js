@@ -18,15 +18,15 @@ var D3Bubbles = function() {
     //
 
     // Chart
-    var _bubbles = function() {
+    var _bubbles = function(id) {
         if (typeof d3 == 'undefined') {
             console.warn('Warning - d3.min.js is not loaded.');
             return;
         }
 
         // Main variables
-        var element = document.getElementById('d3-bubbles'),
-            diameter = 700;
+        var element = document.getElementById(id),
+            diameter = 400;
 
 
         // Initialize chart only if element exsists in the DOM
@@ -83,7 +83,9 @@ var D3Bubbles = function() {
             // Load data
             // ------------------------------
 
-            d3.json("../../../../global_assets/demo_data/d3/other/bubble.json", function(error, root) {
+
+
+            d3.json("../../../../global_assets/demo_data/d3/other/amazon/"+id+".json", function(error, root) {
 
 
                 //
@@ -138,7 +140,9 @@ var D3Bubbles = function() {
 
     return {
         init: function() {
-            _bubbles();
+            _bubbles('d3-bubbles-ny');
+            _bubbles('d3-bubbles-tw');
+            _bubbles('d3-bubbles-cc');
         }
     }
 }();

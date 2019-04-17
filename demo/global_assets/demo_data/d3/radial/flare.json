@@ -1,0 +1,141 @@
+[
+  {
+    "name": "flare.nytimes.Company",
+    "size": 3938
+  },
+  {
+    "name": "flare.nytimes.Amazon",
+    "size": 3938,
+    "imports": [
+      "flare.twitter.Amazon"
+    ]
+  },
+  {
+    "name": "flare.nytimes.Time",
+    "size": 3938,
+    "imports": [
+      "flare.twitter.Time"
+    ]
+  },
+  {
+    "name": "flare.nytimes.York",
+    "size": 3938
+  },
+  {
+    "name": "flare.nytimes.People",
+    "size": 3938
+  },
+  {
+    "name": "flare.nytimes.Trump",
+    "size": 3938
+  },
+  {
+    "name": "flare.nytimes.City",
+    "size": 3938
+  },
+    {
+    "name": "flare.nytimes.Change",
+    "size": 3938
+  },
+    {
+    "name": "flare.nytimes.President",
+    "size": 3938
+  },
+    {
+    "name": "flare.nytimes.Business",
+    "size": 3938
+  },
+
+  {
+    "name": "flare.twitter.Live",
+    "size": 3938
+  },
+  {
+    "name": "flare.twitter.Amazon",
+    "size": 3938,
+    "imports": [
+      "flare.nytimes.Amazon"
+    ]
+  },
+  {
+    "name": "flare.twitter.Twitch",
+    "size": 3938
+  },
+  {
+    "name": "flare.twitter.Stream",
+    "size": 3938
+  },
+  {
+    "name": "flare.twitter.Check",
+    "size": 3938
+  },
+  {
+    "name": "flare.twitter.Play",
+    "size": 3938
+  },
+  {
+    "name": "flare.twitter.Book",
+    "size": 3938
+  },
+    {
+    "name": "flare.twitter.Time",
+    "size": 3938,
+        "imports": [
+      "flare.nytimes.Time"
+    ]
+  },
+    {
+    "name": "flare.twitter.Game",
+    "size": 3938
+  },
+    {
+    "name": "flare.twitter.Love",
+    "size": 3938
+  },
+  {
+    "name": "flare.commoncrawl.Live",
+    "size": 3938
+  },
+  {
+    "name": "flare.commoncrawl.Amazon",
+    "size": 3938,
+    "imports": [
+      "flare.nytimes.Amazon"
+    ]
+  },
+  {
+    "name": "flare.commoncrawl.Twitch",
+    "size": 3938
+  },
+  {
+    "name": "flare.commoncrawl.Stream",
+    "size": 3938
+  },
+  {
+    "name": "flare.commoncrawl.Check",
+    "size": 3938
+  },
+  {
+    "name": "flare.commoncrawl.Play",
+    "size": 3938
+  },
+  {
+    "name": "flare.commoncrawl.Book",
+    "size": 3938
+  },
+    {
+    "name": "flare.commoncrawl.Time",
+    "size": 3938,
+        "imports": [
+      "flare.nytimes.Time"
+    ]
+  },
+    {
+    "name": "flare.commoncrawl.Game",
+    "size": 3938
+  },
+    {
+    "name": "flare.commoncrawl.Love",
+    "size": 3938
+  }
+]

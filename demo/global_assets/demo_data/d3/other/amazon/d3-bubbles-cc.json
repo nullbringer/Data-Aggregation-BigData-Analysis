@@ -1,0 +1,51 @@
+
+{
+ "name": "flare",
+ "children": [
+  {
+   "name": "Twitter",
+   "children": [
+    {"name": "live", "size": 7552},
+    {"name": "amazon", "size": 6626},
+    {"name": "twitch", "size": 5366},
+    {"name": "stream", "size": 4038},
+    {"name": "check", "size": 2451},
+    {"name": "play", "size": 2181},
+    {"name": "book", "size": 1973},
+    {"name": "time", "size": 1640},
+    {"name": "game", "size": 1323},
+    {"name": "love", "size": 1247}
+   ]
+  },
+  {
+   "name": "CommonCrawl",
+   "children": [
+    {"name": "company", "size": 1033},
+    {"name": "amazon", "size": 957},
+    {"name": "time", "size": 891},
+    {"name": "york", "size": 861},
+    {"name": "people", "size": 579},
+    {"name": "trump", "size": 492},
+    {"name": "city", "size": 490},
+    {"name": "change", "size": 460},
+    {"name": "president", "size": 401},
+    {"name": "business", "size": 391}
+   ]
+  },
+  {
+   "name": "NYTimes",
+   "children": [
+    {"name": "company", "size": 1033},
+    {"name": "amazon", "size": 957},
+    {"name": "time", "size": 891},
+    {"name": "york", "size": 861},
+    {"name": "people", "size": 579},
+    {"name": "trump", "size": 492},
+    {"name": "city", "size": 490},
+    {"name": "change", "size": 460},
+    {"name": "president", "size": 401},
+    {"name": "business", "size": 391}
+   ]
+  }
+ ]
+}

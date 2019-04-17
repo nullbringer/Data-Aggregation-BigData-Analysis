@@ -49,7 +49,7 @@ var D3TreeRadial = function() {
             // Add SVG group
             var svg = container
                 .attr("width", diameter)
-                .attr("height", diameter - 140)
+                .attr("height", diameter)
                 .append("g")
                     .attr("transform", "translate(" + (diameter / 2) + "," + (diameter / 2) + ")");
 

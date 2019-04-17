@@ -26,17 +26,51 @@
 	<!-- D3 library -->
 	<script src="../../../../global_assets/js/plugins/forms/styling/uniform.min.js"></script>
 	<!-- Load library -->
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script>
+		
+		d3version4 = d3
+    	window.d3 = null
+	</script>
+
 	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
 
 	<!-- Load tooltip -->
 	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
-	<script src="../../../../global_assets/js/demo_pages/charts/d3/chords/chord_basic.js"></script>
-	<script src="../../../../global_assets/js/demo_pages/charts/d3/sunburst/sunburst_combined.js"></script>
+
+	<script src="../../../../global_assets/js/demo_pages/charts/d3/tree/tree_radial_relation.js"></script>
+
+<!-- 	<script src="../../../../global_assets/js/demo_pages/charts/d3/chords/chord_basic.js"></script> -->
+	<!-- <script src="../../../../global_assets/js/demo_pages/charts/d3/sunburst/sunburst_combined.js"></script> -->
 	<script src="../../../../global_assets/js/demo_pages/charts/d3/other/bubbles.js"></script>
 
 	<!-- Theme JS files -->
 	<script src="assets/js/app.js"></script>
 	<!-- /theme JS files -->
+	<style>
+
+	.node {
+	  font: 15px sans-serif;
+	}
+	.node.twitter{
+		    fill: #41aded;
+	}
+	.node.commoncrawl{
+		    fill: #47a69a;
+	}
+	.node.nytimes{
+		    fill: #ec407a;
+	}
+
+	.link {
+	  stroke: steelblue;
+	  stroke-opacity: 0.5;
+	  fill: none;
+	  pointer-events: none;
+	}
+
+	</style>
+	
 
 </head>
 
@@ -171,7 +205,7 @@
 						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
 							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Companies</span></a>
 
-							<ul class="nav nav-group-sub" data-submenu-title="Religions">
+							<ul class="nav nav-group-sub" data-submenu-title="Companies">
 								<li class="nav-item"><a href="amazon.html" class="nav-link">Amazon</a></li>
 								<li class="nav-item"><a href="christianity.html" class="nav-link">Apple</a></li>
 								<li class="nav-item"><a href="Islam.html" class="nav-link">Google</a></li>
@@ -206,7 +240,7 @@
 			<div class="page-header">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Religions</span> - Atheism</h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Companies</span> - Amazon</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
@@ -397,7 +431,7 @@
 								<div class="card card-body bg-pink-400 has-bg-image m-0">
 								<div class="media">
 									<div class="media-body">
-										<h3 class="mb-0">125</h3>
+										<h3 class="mb-0">300</h3>
 										<span class="text-uppercase font-size-xs">Articles Collected</span>
 									</div>
 
@@ -417,37 +451,24 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Agnostic</a>
+															<a href="#">Company</a>
 														</div>
-														Occurred 8 times
+														Occurred 1033 times
 													</div>
 												</li>
 
 												<li class="media">
 													<div class="mr-3 position-relative">
 														<img src="../../../../global_assets/images/brands/nytimes.png" class="rounded-circle" width="36" height="36" alt="">
-														<span class="badge bg-danger-400 badge-pill badge-float border-2 border-white">8</span>
+													
 													</div>
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">James Alexander</a>
+															<a href="#">Amazon</a>
 														</div>
 
-														Occurred 10 times
-													</div>
-												</li>
-												<li class="media">
-													<div class="mr-3 position-relative">
-														<img src="../../../../global_assets/images/brands/nytimes.png" class="rounded-circle" width="36" height="36" alt="">
-														
-													</div>
-
-													<div class="media-body">
-														<div class="d-flex justify-content-between">
-															<a href="#">Secular</a>
-														</div>
-														Occurred 8 times
+														Occurred 957 times
 													</div>
 												</li>
 												<li class="media">
@@ -458,9 +479,9 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Non-religious</a>
+															<a href="#">Time</a>
 														</div>
-														Occurred 8 times
+														Occurred 891 times
 													</div>
 												</li>
 												<li class="media">
@@ -471,9 +492,9 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Agnostic</a>
+															<a href="#">York</a>
 														</div>
-														Occurred 8 times
+														Occurred 861 times
 													</div>
 												</li>
 												<li class="media">
@@ -484,24 +505,9 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Agnostic</a>
+															<a href="#">People</a>
 														</div>
-														Occurred 8 times
-													</div>
-												</li>
-
-												<li class="media">
-													<div class="mr-3 position-relative">
-														<img src="../../../../global_assets/images/brands/nytimes.png" class="rounded-circle" width="36" height="36" alt="">
-														<span class="badge bg-danger-400 badge-pill badge-float border-2 border-white">8</span>
-													</div>
-
-													<div class="media-body">
-														<div class="d-flex justify-content-between">
-															<a href="#">James Alexander</a>
-														</div>
-
-														Occurred 10 times
+														Occurred 579 times
 													</div>
 												</li>
 												<li class="media">
@@ -512,9 +518,24 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Secular</a>
+															<a href="#">Trump</a>
 														</div>
-														Occurred 8 times
+														Occurred 492 times
+													</div>
+												</li>
+
+												<li class="media">
+													<div class="mr-3 position-relative">
+														<img src="../../../../global_assets/images/brands/nytimes.png" class="rounded-circle" width="36" height="36" alt="">
+												
+													</div>
+
+													<div class="media-body">
+														<div class="d-flex justify-content-between">
+															<a href="#">City</a>
+														</div>
+
+														Occurred 490 times
 													</div>
 												</li>
 												<li class="media">
@@ -525,9 +546,9 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Non-religious</a>
+															<a href="#">Change</a>
 														</div>
-														Occurred 8 times
+														Occurred 460 times
 													</div>
 												</li>
 												<li class="media">
@@ -538,9 +559,22 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Agnostic</a>
+															<a href="#">President</a>
 														</div>
-														Occurred 8 times
+														Occurred 401 times
+													</div>
+												</li>
+												<li class="media">
+													<div class="mr-3 position-relative">
+														<img src="../../../../global_assets/images/brands/nytimes.png" class="rounded-circle" width="36" height="36" alt="">
+														
+													</div>
+
+													<div class="media-body">
+														<div class="d-flex justify-content-between">
+															<a href="#">Business</a>
+														</div>
+														Occurred 391 times
 													</div>
 												</li>
 											</ul>
@@ -557,7 +591,7 @@
 							<div class="card card-body bg-blue-400 has-bg-image m-0">
 								<div class="media">
 									<div class="media-body">
-										<h3 class="mb-0">54,390</h3>
+										<h3 class="mb-0">30,000</h3>
 										<span class="text-uppercase font-size-xs">Tweets Collected</span>
 									</div>
 
@@ -577,24 +611,24 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Agnostic</a>
+															<a href="#">Live</a>
 														</div>
-														Occurred 8 times
+														Occurred 7552 times
 													</div>
 												</li>
 
 												<li class="media">
 													<div class="mr-3 position-relative">
 														<img src="../../../../global_assets/images/brands/twitter.png" class="rounded-circle" width="36" height="36" alt="">
-														<span class="badge bg-danger-400 badge-pill badge-float border-2 border-white">8</span>
+														
 													</div>
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">James Alexander</a>
+															<a href="#">Amazon</a>
 														</div>
 
-														Occurred 10 times
+														Occurred 6626 times
 													</div>
 												</li>
 												<li class="media">
@@ -605,9 +639,9 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Secular</a>
+															<a href="#">Twitch</a>
 														</div>
-														Occurred 8 times
+														Occurred 5366 times
 													</div>
 												</li>
 												<li class="media">
@@ -618,9 +652,9 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Non-religious</a>
+															<a href="#">Stream</a>
 														</div>
-														Occurred 8 times
+														Occurred 4038 times
 													</div>
 												</li>
 												<li class="media">
@@ -631,9 +665,9 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Agnostic</a>
+															<a href="#">Check</a>
 														</div>
-														Occurred 8 times
+														Occurred 2451 times
 													</div>
 												</li>
 												<li class="media">
@@ -644,37 +678,24 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Agnostic</a>
+															<a href="#">Play</a>
 														</div>
-														Occurred 8 times
+														Occurred 2181 times
 													</div>
 												</li>
 
 												<li class="media">
 													<div class="mr-3 position-relative">
 														<img src="../../../../global_assets/images/brands/twitter.png" class="rounded-circle" width="36" height="36" alt="">
-														<span class="badge bg-danger-400 badge-pill badge-float border-2 border-white">8</span>
+													
 													</div>
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">James Alexander</a>
+															<a href="#">Book</a>
 														</div>
 
-														Occurred 10 times
-													</div>
-												</li>
-												<li class="media">
-													<div class="mr-3 position-relative">
-														<img src="../../../../global_assets/images/brands/twitter.png" class="rounded-circle" width="36" height="36" alt="">
-														
-													</div>
-
-													<div class="media-body">
-														<div class="d-flex justify-content-between">
-															<a href="#">Secular</a>
-														</div>
-														Occurred 8 times
+														Occurred 1973 times
 													</div>
 												</li>
 												<li class="media">
@@ -685,9 +706,9 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Non-religious</a>
+															<a href="#">Time</a>
 														</div>
-														Occurred 8 times
+														Occurred 1640 times
 													</div>
 												</li>
 												<li class="media">
@@ -698,9 +719,22 @@
 
 													<div class="media-body">
 														<div class="d-flex justify-content-between">
-															<a href="#">Agnostic</a>
+															<a href="#">Game</a>
 														</div>
-														Occurred 8 times
+														Occurred 1323 times
+													</div>
+												</li>
+												<li class="media">
+													<div class="mr-3 position-relative">
+														<img src="../../../../global_assets/images/brands/twitter.png" class="rounded-circle" width="36" height="36" alt="">
+														
+													</div>
+
+													<div class="media-body">
+														<div class="d-flex justify-content-between">
+															<a href="#">Love</a>
+														</div>
+														Occurred 1247 times
 													</div>
 												</li>
 
@@ -746,20 +780,12 @@
 					<div class="col-md-6">
 						<div class="card">
 							<div class="card-header header-elements-inline">
-								<h5 class="card-title">Basic chords</h5>
-								<div class="header-elements">
-									<div class="list-icons">
-				                		<a class="list-icons-item" data-action="collapse"></a>
-				                		<a class="list-icons-item" data-action="reload"></a>
-				                		<a class="list-icons-item" data-action="remove"></a>
-				                	</div>
-			                	</div>
+								<h5 class="card-title">The Convergence of Top Keywords</h5>
 							</div>
 
 							<div class="card-body">
 								<div class="mb-3">
-									<h6 class="font-weight-semibold">Basic chord diagram</h6>
-									<p class="mb-3">Basic example of <code>chord</code> diagram. Chord diagrams show directed relationships among a group of entities. This example also demonstrates simple interactivity by using mouseover filtering.</p>
+									<p class="mb-3">The Radial Chart below represents the top keywords from NYTimes, Twitter and CommonCrawl and points out which of the keywords converged.</p>
 
 									<div class="chart-container has-scroll text-center">
 
@@ -773,26 +799,37 @@
 
 
 					<div class="col-md-6">
+
 						<div class="card">
 							<div class="card-header header-elements-inline">
-								<h5 class="card-title">Zoomable sunburst</h5>
-								<div class="header-elements">
-									<div class="list-icons">
-				                		<a class="list-icons-item" data-action="collapse"></a>
-				                		<a class="list-icons-item" data-action="reload"></a>
-				                		<a class="list-icons-item" data-action="remove"></a>
-				                	</div>
-			                	</div>
+								<h6 class="card-title">Word Bubbles</h6>
 							</div>
 
 							<div class="card-body">
-								<div class="mb-3">
-									<h6 class="font-weight-semibold">Zoom and update</h6>
-									<p class="mb-3">Example of <code>zooming</code> and <code>updating</code> data combination. Click on any arc to zoom in, and click on the center circle to zoom out. Use the Size/Count radio buttons to update the data.</p>
+								<ul class="nav nav-tabs nav-tabs-highlight">
+									<li class="nav-item"><a href="#bottom-tab1" class="nav-link active" data-toggle="tab">NYTimes</a></li>
+									<li class="nav-item"><a href="#bottom-tab2" class="nav-link" data-toggle="tab">Twitter </a></li>
+									<li class="nav-item"><a href="#bottom-tab3" class="nav-link" data-toggle="tab">Common Crawl </a></li>
 
-									<div class="chart-container has-scroll text-center">
+								</ul>
 
-										<div class="chart svg-center" id="d3-sunburst-combined"></div>
+								<div class="tab-content">
+									<div class="tab-pane fade show active" id="bottom-tab1">
+										<div class="chart-container has-scroll">
+											<div class="chart svg-center" id="d3-bubbles-ny"></div>
+										</div>
+									</div>
+
+									<div class="tab-pane fade" id="bottom-tab2">
+										<div class="chart-container has-scroll">
+											<div class="chart svg-center" id="d3-bubbles-tw"></div>
+										</div>
+									</div>
+
+									<div class="tab-pane fade" id="bottom-tab3">
+										<div class="chart-container has-scroll">
+											<div class="chart svg-center" id="d3-bubbles-cc"></div>
+										</div>
 									</div>
 								</div>
 							</div>
@@ -800,28 +837,9 @@
 					</div>
 				</div>
 
-				<!-- Bubble chart -->
-				<div class="card">
-					<div class="card-header header-elements-inline">
-						<h5 class="card-title">Bubble chart</h5>
-						<div class="header-elements">
-							<div class="list-icons">
-		                		<a class="list-icons-item" data-action="collapse"></a>
-		                		<a class="list-icons-item" data-action="reload"></a>
-		                		<a class="list-icons-item" data-action="remove"></a>
-		                	</div>
-	                	</div>
-					</div>
 
-					<div class="card-body">
-						<p class="mb-3">Example of <code>bubble</code> chart layout. Bubble charts encode data in the area of circles. This type of chart can facilitate the understanding of social, economical, medical, and other scientific relationships. Although less perceptually-accurate than bar charts, they can pack hundreds of values into a small space. Data tooltip is displayed on circle hover.</p>
 
-						<div class="chart-container has-scroll">
-							<div class="chart svg-center" id="d3-bubbles"></div>
-						</div>
-					</div>
-				</div>
-				<!-- /bubble chart -->
+
 
 
 
