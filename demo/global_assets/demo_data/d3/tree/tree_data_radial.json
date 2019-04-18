@@ -28,9 +28,7 @@
     {
      "name": "CommonCrawl",
      "children": [
-      {"name": "Amazon", "size": 3534},
-      {"name": "Kindle", "size": 3416},
-      {"name": "Alexa", "size": 3534}
+      {"name": "Amazon", "size": 3534}
      ]
     }
    ]
@@ -65,12 +63,7 @@
     {
      "name": "CommonCrawl",
      "children": [
-      {"name": "iPhone", "size": 3534},
-      {"name": "iPad", "size": 3416},
-      {"name": "iPod", "size": 3534},
-      {"name": "MacBook", "size": 3534},
-      {"name": "iTunes", "size": 3416},
-      {"name": "Apple Watch", "size": 3416}
+      {"name": "Apple", "size": 3534}
      ]
     }
    ]
@@ -99,10 +92,7 @@
     {
      "name": "CommonCrawl",
      "children": [
-      {"name": "Google", "size": 3534},
-      {"name": "Youtube", "size": 3416},
-      {"name": "Gmail", "size": 3534},
-      {"name": "Adsense", "size": 3416}
+      {"name": "Google", "size": 3534}
      ]
     }
    ]
@@ -131,9 +121,7 @@
     {
      "name": "CommonCrawl",
      "children": [
-      {"name": "Facebook", "size": 3534},
-      {"name": "Instagram", "size": 3416},
-      {"name": "WhatsApp", "size": 3534}
+      {"name": "Facebook", "size": 3534}
      ]
     }
    ]

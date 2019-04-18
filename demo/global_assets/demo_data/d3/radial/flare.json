@@ -3,19 +3,10 @@
     "name": "flare.nytimes.Company",
     "size": 3938
   },
-  {
-    "name": "flare.nytimes.Amazon",
-    "size": 3938,
-    "imports": [
-      "flare.twitter.Amazon"
-    ]
-  },
+
   {
     "name": "flare.nytimes.Time",
-    "size": 3938,
-    "imports": [
-      "flare.twitter.Time"
-    ]
+    "size": 3938
   },
   {
     "name": "flare.nytimes.York",
@@ -32,6 +23,13 @@
   {
     "name": "flare.nytimes.City",
     "size": 3938
+  },
+    {
+    "name": "flare.nytimes.Amazon",
+    "size": 3938,
+    "imports": [
+      "flare.commoncrawl.Amazon"
+    ]
   },
     {
     "name": "flare.nytimes.Change",
@@ -93,49 +91,56 @@
     "size": 3938
   },
   {
-    "name": "flare.commoncrawl.Live",
+    "name": "flare.commoncrawl.Company",
+    "size": 3938,
+    "imports": [
+      "flare.nytimes.Company"
+    ]
+  },
+  {
+    "name": "flare.commoncrawl.People",
+    "size": 3938,
+    "imports": [
+      "flare.nytimes.People"
+    ]
+  },
+  {
+    "name": "flare.commoncrawl.Service",
     "size": 3938
   },
   {
+    "name": "flare.commoncrawl.Google",
+    "size": 3938
+  },
+  {
+    "name": "flare.commoncrawl.Time",
+    "size": 3938,
+    "imports": [
+      "flare.nytimes.Time",
+      "flare.twitter.Time"
+    ]
+  },
+  {
+    "name": "flare.commoncrawl.Content",
+    "size": 3938
+  },
+    {
+    "name": "flare.commoncrawl.Million",
+    "size": 3938
+  },
+    {
+    "name": "flare.commoncrawl.Product",
+    "size": 3938
+  },
+    {
     "name": "flare.commoncrawl.Amazon",
     "size": 3938,
     "imports": [
-      "flare.nytimes.Amazon"
-    ]
-  },
-  {
-    "name": "flare.commoncrawl.Twitch",
-    "size": 3938
-  },
-  {
-    "name": "flare.commoncrawl.Stream",
-    "size": 3938
-  },
-  {
-    "name": "flare.commoncrawl.Check",
-    "size": 3938
-  },
-  {
-    "name": "flare.commoncrawl.Play",
-    "size": 3938
-  },
-  {
-    "name": "flare.commoncrawl.Book",
-    "size": 3938
-  },
-    {
-    "name": "flare.commoncrawl.Time",
-    "size": 3938,
-        "imports": [
-      "flare.nytimes.Time"
+      "flare.twitter.Amazon"
     ]
   },
     {
-    "name": "flare.commoncrawl.Game",
-    "size": 3938
-  },
-    {
-    "name": "flare.commoncrawl.Love",
+    "name": "flare.commoncrawl.Build",
     "size": 3938
   }
 ]
