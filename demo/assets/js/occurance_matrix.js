@@ -9,7 +9,7 @@ function createOccuranceMatrix(id, file){
           width = 400,
           height = 400;
 
-        var svg = d3version4.select("#d3-matrix-tw").append("svg")
+        var svg = d3version4.select("#"+id).append("svg")
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
@@ -27,9 +27,8 @@ function createOccuranceMatrix(id, file){
             var nodes = data.nodes;
             var total_items = nodes.length;
 
-            var matrixScale = d3version4.scaleBand().range([0, width]).domain(d3version4.range(total_items));
-            var opacityScale = d3version4.scaleLinear().domain([0, 10]).range([0.3, 1.0]).clamp(true);
-            var colorScale = d3version4.scaleOrdinal(d3version4.schemeCategory20);
+            
+
 
             // Create rows for the matrix
             nodes.forEach(function(node) {
@@ -44,13 +43,30 @@ function createOccuranceMatrix(id, file){
                 });
             });
 
+            var max_range =0; 
+            var min_range = 0;
+
             // Fill matrix with data from links and count how many times each item appears
             data.links.forEach(function(link) {
                 matrix[link.source][link.target].z += link.value;
                 matrix[link.target][link.source].z += link.value;
                 nodes[link.source].count += link.value;
                 nodes[link.target].count += link.value;
+
+                max_range = Math.max(max_range, link.value)
+                min_range = Math.min(min_range, link.value)
+
             });
+
+            console.log("max: "+max_range);
+            console.log("min:"+max_range);
+
+
+            var matrixScale = d3version4.scaleBand().range([0, width]).domain(d3version4.range(total_items));
+            var opacityScale = d3version4.scaleLinear().domain([min_range, max_range]).range([0.1, 1.0]).clamp(true);
+            var colorScale = d3version4.scaleOrdinal(d3version4.schemeCategory20);
+
+
 
             // Draw each row (translating the y coordinate)
             var rows = svg.selectAll(".row")
@@ -111,27 +127,7 @@ function createOccuranceMatrix(id, file){
                 })
             };
 
-            d3version4.select("#order").on("change", function() {
-                changeOrder(this.value);
-            });
 
-            function changeOrder(value) {
-                matrixScale.domain(orders[value]);
-                var t = svg.transition().duration(2000);
-
-                t.selectAll(".row")
-                    .delay((d, i) => matrixScale(i) * 4)
-                    .attr("transform", function(d, i) {
-                        return "translate(0," + matrixScale(i) + ")";
-                    })
-                    .selectAll(".cell")
-                    .delay(d => matrixScale(d.x) * 4)
-                    .attr("x", d => matrixScale(d.x));
-
-                t.selectAll(".column")
-                    .delay((d, i) => matrixScale(i) * 4)
-                    .attr("transform", (d, i) => "translate(" + matrixScale(i) + ")rotate(-90)");
-            }
 
             rows.append("line")
                 .attr("x2", width);
