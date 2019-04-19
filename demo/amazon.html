@@ -17,14 +17,14 @@
 	<!-- /global stylesheets -->
 
 	<!-- Core JS files -->
-	<script src="../../../../global_assets/js/main/jquery.min.js"></script>
-	<script src="../../../../global_assets/js/main/bootstrap.bundle.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/loaders/blockui.min.js"></script>
-	<script src="../../../../global_assets/js/plugins/ui/ripple.min.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/blockui.min.js"></script>
+	<script src="assets/js/ripple.min.js"></script>
 	<!-- /core JS files -->
 
 	<!-- D3 library -->
-	<script src="../../../../global_assets/js/plugins/forms/styling/uniform.min.js"></script>
+
 	<!-- Load library -->
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script>
@@ -33,16 +33,14 @@
     	window.d3 = null
 	</script>
 
-	<script src="../../../../global_assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script src="assets/js/d3.min.js"></script>
 
 	<!-- Load tooltip -->
-	<script src="../../../../global_assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<script src="assets/js/d3_tooltip.js"></script>
 
-	<script src="../../../../global_assets/js/demo_pages/charts/d3/tree/tree_radial_relation.js"></script>
+	<script src="assets/js/tree_radial_relation.js"></script>
 
-<!-- 	<script src="../../../../global_assets/js/demo_pages/charts/d3/chords/chord_basic.js"></script> -->
-	<!-- <script src="../../../../global_assets/js/demo_pages/charts/d3/sunburst/sunburst_combined.js"></script> -->
-	<script src="../../../../global_assets/js/demo_pages/charts/d3/other/bubbles.js"></script>
+	<script src="assets/js/bubbles.js"></script>
 
 	<!-- Theme JS files -->
 	<script src="assets/js/app.js"></script>
@@ -1040,7 +1038,7 @@
 
 
 
-        d3version4.json("global_assets/demo_data/d3/other/amazon/d3-matrix-tw.json", function(data) {
+        d3version4.json("assets/demo_data/amazon/d3-matrix-tw.json", function(data) {
             var matrix = [];
             var nodes = data.nodes;
             var total_items = nodes.length;
