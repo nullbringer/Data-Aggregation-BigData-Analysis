@@ -85,7 +85,7 @@ var D3Bubbles = function() {
 
 
 
-            d3.json("../../../../assets/demo_data/amazon/"+file+".json", function(error, root) {
+            d3.json("../../../../assets/demo_data/"+file+".json", function(error, root) {
 
 
                 //
@@ -140,9 +140,12 @@ var D3Bubbles = function() {
 
     return {
         init: function() {
-            _bubbles('ny/bubbles-wc','d3-bubbles-ny');
-            _bubbles('tw/bubbles-wc','d3-bubbles-tw');
-            _bubbles('cc/bubbles-wc','d3-bubbles-cc');
+            _bubbles('amazon/ny/bubbles-wc','d3-bubbles-ny');
+            _bubbles('amazon/tw/bubbles-wc','d3-bubbles-tw');
+            _bubbles('amazon/cc/bubbles-wc','d3-bubbles-cc');
+            _bubbles('all/ny/bubbles-wc','all-d3-bubbles-ny');
+            _bubbles('all/tw/bubbles-wc','all-d3-bubbles-tw');
+            _bubbles('all/cc/bubbles-wc','all-d3-bubbles-cc');
         }
     }
 }();
