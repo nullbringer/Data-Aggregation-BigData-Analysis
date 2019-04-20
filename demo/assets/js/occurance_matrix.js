@@ -22,7 +22,7 @@ function createOccuranceMatrix(id, file){
 
 
 
-        d3version4.json("assets/demo_data/amazon/"+file, function(data) {
+        d3version4.json("assets/demo_data/"+file, function(data) {
             var matrix = [];
             var nodes = data.nodes;
             var total_items = nodes.length;
@@ -206,7 +206,11 @@ function createOccuranceMatrix(id, file){
 // ------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
-    createOccuranceMatrix('d3-matrix-ny','ny/matrix-cooc.json');
-    createOccuranceMatrix('d3-matrix-tw','tw/matrix-cooc.json');
-    createOccuranceMatrix('d3-matrix-cc','cc/matrix-cooc.json');
+    createOccuranceMatrix('d3-matrix-ny','amazon/ny/matrix-cooc.json');
+    createOccuranceMatrix('d3-matrix-tw','amazon/tw/matrix-cooc.json');
+    createOccuranceMatrix('d3-matrix-cc','amazon/cc/matrix-cooc.json');
+
+    createOccuranceMatrix('all-d3-matrix-ny','all/ny/matrix-cooc.json');
+    createOccuranceMatrix('all-d3-matrix-tw','all/tw/matrix-cooc.json');
+    createOccuranceMatrix('all-d3-matrix-cc','all/cc/matrix-cooc.json');
 });

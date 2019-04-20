@@ -1,4 +1,4 @@
-function D3TreeRadialRelation() {
+function D3TreeRadialRelation(file, id) {
 
     var diameter = 515,
         radius = diameter / 2,
@@ -12,7 +12,7 @@ function D3TreeRadialRelation() {
         .radius(function(d) { return d.y; })
         .angle(function(d) { return d.x / 180 * Math.PI; });
 
-    var svg = d3version4.select("#d3-chord-basic").append("svg")
+    var svg = d3version4.select("#"+id).append("svg")
         .attr("width", diameter)
         .attr("height", diameter)
       .append("g")
@@ -21,7 +21,7 @@ function D3TreeRadialRelation() {
     var link = svg.append("g").selectAll(".link"),
         node = svg.append("g").selectAll(".node");
 
-    d3version4.json("../../../assets/demo_data/amazon/flare.json", function(error, classes) {
+    d3version4.json("../../../assets/demo_data/"+file, function(error, classes) {
       if (error) throw error;
 
       var root = packageHierarchy(classes)
@@ -97,7 +97,8 @@ function D3TreeRadialRelation() {
 // ------------------------------
 
 document.addEventListener('DOMContentLoaded', function() {
-    D3TreeRadialRelation();
+    D3TreeRadialRelation('amazon/flare.json','d3-chord-basic');
+    D3TreeRadialRelation('all/flare.json','all-d3-chord-basic');
 });
 
 
