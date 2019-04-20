@@ -37,6 +37,29 @@
 	<script src="assets/js/app.js"></script>
 	<!-- /theme JS files -->
 
+	<style>
+		
+
+
+.d3-line-medium {
+    stroke-width: 1.5px;
+}
+
+.d3-line {
+    fill: none;
+}
+
+.d3-line-circle-medium {
+    stroke-width: 1.5px;
+}
+
+.d3-line-circle {
+    fill: none;
+    cursor: pointer;
+}
+
+	</style>
+
 </head>
 
 <body class="navbar-top">
@@ -167,16 +190,20 @@
 								<span>Dashboard</span>
 							</a>
 						</li>
-						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
-							<a href="#" class="nav-link"><i class="icon-stack"></i> <span>Companies</span></a>
+						<li class="nav-item nav-item-submenu">
+							<a href="#" class="nav-link"><i class="icon-chart"></i> <span>Visualization</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Companies">
+								<li class="nav-item"><a href="all_companies.html" class="nav-link">All Companies</a></li>
 								<li class="nav-item"><a href="amazon.html" class="nav-link">Amazon</a></li>
-								<li class="nav-item"><a href="christianity.html" class="nav-link">Apple</a></li>
-								<li class="nav-item"><a href="Islam.html" class="nav-link">Google</a></li>
-								<li class="nav-item"><a href="hinduism.html" class="nav-link">Facebook</a></li>
-								<li class="nav-item"><a href="judaism.html" class="nav-link">Uber</a></li>
+								
 							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="index.html" class="nav-link">
+								<i class="icon-video-camera"></i>
+								<span>Demo</span>
+							</a>
 						</li>
 						<li class="nav-item">
 							<a href="../full/changelog.html" class="nav-link">
@@ -329,7 +356,7 @@
 								<!-- Top placement -->
 								<div class="card">
 									<div class="embed-responsive embed-responsive-16by9 card-img-top">
-										<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/317169901?title=0&byline=0&portrait=0" allowfullscreen frameborder="0" mozallowfullscreen></iframe>
+										<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/180169500?title=0&byline=0&portrait=0" allowfullscreen frameborder="0" mozallowfullscreen></iframe>
 									</div>
 
 								</div>
@@ -341,14 +368,7 @@
 			<!-- Radial tree layout -->
 				<div class="card">
 					<div class="card-header header-elements-inline">
-						<h5 class="card-title">Radial tree layout</h5>
-						<div class="header-elements">
-							<div class="list-icons">
-		                		<a class="list-icons-item" data-action="collapse"></a>
-		                		<a class="list-icons-item" data-action="reload"></a>
-		                		<a class="list-icons-item" data-action="remove"></a>
-		                	</div>
-	                	</div>
+						<h5 class="card-title">Radial Tree of Keywords</h5>
 					</div>
 
 					<div class="card-body">

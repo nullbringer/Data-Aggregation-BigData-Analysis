@@ -266,45 +266,45 @@ var StatisticWidgets = function() {
                 .attr('class', 'd3-tip')
                 .offset([-10, 0]);
 
-            // Show and hide
-            if(tooltip == "hours" || tooltip == "goal" || tooltip == "members") {
-                bars.call(tip)
-                    .on('mouseover', tip.show)
-                    .on('mouseout', tip.hide);
-            }
+            // // Show and hide
+            // if(tooltip == "hours" || tooltip == "goal" || tooltip == "members") {
+            //     bars.call(tip)
+            //         .on('mouseover', tip.show)
+            //         .on('mouseout', tip.hide);
+            // }
 
-            // Daily meetings tooltip content
-            if(tooltip == "hours") {
-                tip.html(function (d, i) {
-                    return "<div class='text-center'>" +
-                            "<h6 class='mb-0'>" + d + "</h6>" +
-                            "<span class='font-size-sm'>meetings</span>" +
-                            "<div class='font-size-sm'>" + i + ":00" + "</div>" +
-                        "</div>";
-                });
-            }
+            // // Daily meetings tooltip content
+            // if(tooltip == "hours") {
+            //     tip.html(function (d, i) {
+            //         return "<div class='text-center'>" +
+            //                 "<h6 class='mb-0'>" + d + "</h6>" +
+            //                 "<span class='font-size-sm'>meetings</span>" +
+            //                 "<div class='font-size-sm'>" + i + ":00" + "</div>" +
+            //             "</div>";
+            //     });
+            // }
 
-            // Statements tooltip content
-            if(tooltip == "goal") {
-                tip.html(function (d, i) {
-                    return "<div class='text-center'>" +
-                            "<h6 class='mb-0'>" + d + "</h6>" +
-                            "<span class='font-size-sm'>statements</span>" +
-                            "<div class='font-size-sm'>" + i + ":00" + "</div>" +
-                        "</div>";
-                });
-            }
+            // // Statements tooltip content
+            // if(tooltip == "goal") {
+            //     tip.html(function (d, i) {
+            //         return "<div class='text-center'>" +
+            //                 "<h6 class='mb-0'>" + d + "</h6>" +
+            //                 "<span class='font-size-sm'>statements</span>" +
+            //                 "<div class='font-size-sm'>" + i + ":00" + "</div>" +
+            //             "</div>";
+            //     });
+            // }
 
-            // Online members tooltip content
-            if(tooltip == "members") {
-                tip.html(function (d, i) {
-                    return "<div class='text-center'>" +
-                            "<h6 class='mb-0'>" + d + "0" + "</h6>" +
-                            "<span class='font-size-sm'>members</span>" +
-                            "<div class='font-size-sm'>" + i + ":00" + "</div>" +
-                        "</div>";
-                });
-            }
+            // // Online members tooltip content
+            // if(tooltip == "members") {
+            //     tip.html(function (d, i) {
+            //         return "<div class='text-center'>" +
+            //                 "<h6 class='mb-0'>" + d + "0" + "</h6>" +
+            //                 "<span class='font-size-sm'>members</span>" +
+            //                 "<div class='font-size-sm'>" + i + ":00" + "</div>" +
+            //             "</div>";
+            //     });
+            // }
 
 
 
@@ -637,51 +637,51 @@ var StatisticWidgets = function() {
                     .style('opacity', 1);
 
             // Add user interaction
-            points
-                .on("mouseover", function (d) {
-                    tooltip.offset([-10, 0]).show(d);
+            // points
+            //     .on("mouseover", function (d) {
+            //         tooltip.offset([-10, 0]).show(d);
 
-                    // Animate circle radius
-                    d3.select(this).transition().duration(250).attr('r', 4);
-                })
+            //         // Animate circle radius
+            //         d3.select(this).transition().duration(250).attr('r', 4);
+            //     })
 
-                // Hide tooltip
-                .on("mouseout", function (d) {
-                    tooltip.hide(d);
+            //     // Hide tooltip
+            //     .on("mouseout", function (d) {
+            //         tooltip.hide(d);
 
-                    // Animate circle radius
-                    d3.select(this).transition().duration(250).attr('r', 3);
-                });
+            //         // Animate circle radius
+            //         d3.select(this).transition().duration(250).attr('r', 3);
+            //     });
 
             // Change tooltip direction of first point
-            d3.select(points[0][0])
-                .on("mouseover", function (d) {
-                    tooltip.offset([0, 10]).direction('e').show(d);
+            // d3.select(points[0][0])
+            //     .on("mouseover", function (d) {
+            //         tooltip.offset([0, 10]).direction('e').show(d);
 
-                    // Animate circle radius
-                    d3.select(this).transition().duration(250).attr('r', 4);
-                })
-                .on("mouseout", function (d) {
-                    tooltip.direction('n').hide(d);
+            //         // Animate circle radius
+            //         d3.select(this).transition().duration(250).attr('r', 4);
+            //     })
+            //     .on("mouseout", function (d) {
+            //         tooltip.direction('n').hide(d);
 
-                    // Animate circle radius
-                    d3.select(this).transition().duration(250).attr('r', 3);
-                });
+            //         // Animate circle radius
+            //         d3.select(this).transition().duration(250).attr('r', 3);
+            //     });
 
             // Change tooltip direction of last point
-            d3.select(points[0][points.size() - 1])
-                .on("mouseover", function (d) {
-                    tooltip.offset([0, -10]).direction('w').show(d);
+            // d3.select(points[0][points.size() - 1])
+            //     .on("mouseover", function (d) {
+            //         tooltip.offset([0, -10]).direction('w').show(d);
 
-                    // Animate circle radius
-                    d3.select(this).transition().duration(250).attr('r', 4);
-                })
-                .on("mouseout", function (d) {
-                    tooltip.direction('n').hide(d);
+            //         // Animate circle radius
+            //         d3.select(this).transition().duration(250).attr('r', 4);
+            //     })
+            //     .on("mouseout", function (d) {
+            //         tooltip.direction('n').hide(d);
 
-                    // Animate circle radius
-                    d3.select(this).transition().duration(250).attr('r', 3);
-                });
+            //         // Animate circle radius
+            //         d3.select(this).transition().duration(250).attr('r', 3);
+            //     });
 
 
             // Resize chart
