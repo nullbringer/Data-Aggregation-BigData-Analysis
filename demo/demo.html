@@ -26,39 +26,106 @@
 	<!-- D3 library -->
 
 	<!-- Load library -->
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script>
+
+		d3version4 = d3
+    	window.d3 = null
+	</script>
+
 	<script src="assets/js/d3.min.js"></script>
 
 	<!-- Load tooltip -->
 	<script src="assets/js/d3_tooltip.js"></script>
-	<script src="assets/js/tree_radial.js"></script>
-	<script src="assets/js/widgets_stats.js"></script>
+
+	<script src="assets/js/tree_radial_relation.js"></script>
+
+	<script src="assets/js/bubbles.js"></script>
+
+	<script src="assets/js/occurance_matrix.js"></script>
 
 	<!-- Theme JS files -->
 	<script src="assets/js/app.js"></script>
 	<!-- /theme JS files -->
 
 	<style>
-		
+
+	.node {
+	  font: 15px sans-serif;
+	}
+	.node.twitter{
+		    fill: #41aded;
+	}
+	.node.commoncrawl{
+		    fill: #47a69a;
+	}
+	.node.nytimes{
+		    fill: #ec407a;
+	}
+
+	.link {
+		pointer-events: none;
+	    stroke: #2877b3;
+	    stroke-opacity: 0.5;
+	    fill: none;
+	    stroke-dasharray: 3;
+	    stroke-width: 2;
+	}
+
+	.d3-tip {
+	    position: absolute;
+	    padding: .5625rem .75rem;
+	    background-color: #000;
+	    color: #fff;
+	    margin-bottom: 0;
+	    font-size: .8125rem;
+	    z-index: 1070;
+	    border-radius: .1875rem;
+	    text-transform: capitalize;
+	}
+	.d3-bubbles-node > text{
+		text-transform: capitalize;
+	}
 
 
-.d3-line-medium {
-    stroke-width: 1.5px;
-}
+    .co-occ-matrix .background{
+      fill: #eee;
+    }
 
-.d3-line {
-    fill: none;
-}
+    .co-occ-matrix .label {
+    	font: 300 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    	fill: #2f2f2f;
+    }
 
-.d3-line-circle-medium {
-    stroke-width: 1.5px;
-}
+    div.tooltip {
+	   	position: absolute;
+	    text-align: center;
+	    color: #fff;
+	    border-radius: 5px;
+	    padding: 2px 8px;
+	    background: black;
+	    border: 0px;
+	    pointer-events: none;
+	    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	    transition: 0.3s;
+    }
 
-.d3-line-circle {
-    fill: none;
-    cursor: pointer;
-}
 
-	</style>
+
+    .co-occ-matrix  line {
+      stroke: #fff;
+    }
+
+
+    #all-d3-bubbles-ny {
+    	 margin-bottom: 50px;
+    }
+
+
+
+
+      </style>
+
 
 </head>
 
@@ -71,7 +138,7 @@
 		<div class="navbar-header navbar-dark d-none d-md-flex align-items-md-center">
 			<div class="navbar-brand navbar-brand-md">
 			</div>
-			
+
 			<div class="navbar-brand navbar-brand-xs">
 				<a href="../full/index.html" class="d-inline-block">
 					<img src="../../../../global_assets/images/logo_icon_light.png" alt="">
@@ -79,7 +146,7 @@
 			</div>
 		</div>
 		<!-- /header with logos -->
-	
+
 
 		<!-- Mobile controls -->
 		<div class="d-flex flex-1 d-md-none">
@@ -87,7 +154,7 @@
 				<a href="../full/index.html" class="d-inline-block">
 					<img src="../../../../global_assets/images/logo_dark.png" alt="">
 				</a>
-			</div>	
+			</div>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
 				<i class="icon-tree5"></i>
@@ -109,12 +176,12 @@
 					</a>
 				</li>
 
-			
+
 			</ul>
 
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					
+
 
 					<button type="button" class="btn btn-success btn-labeled btn-labeled-left btn-sm"><b><i class="icon-book"></i></b> Documentation</button>
 
@@ -164,13 +231,13 @@
 							<h6 class="mb-0 text-white text-shadow-dark">University at Buffalo</h6>
 							<span class="font-size-sm text-white text-shadow-dark">New York, USA</span>
 						</div>
-													
+
 						<div class="sidebar-user-material-footer">
 							<a href="#user-nav" class="d-flex justify-content-between align-items-center text-shadow-dark dropdown-toggle" data-toggle="collapse"><span>Navigation</span></a>
 						</div>
 					</div>
 
-				
+
 				</div>
 				<!-- /user menu -->
 
@@ -182,22 +249,21 @@
 						<!-- Main -->
 						<li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
 						<li class="nav-item">
-							<a href="index.html" class="nav-link active">
+							<a href="index.html" class="nav-link">
 								<i class="icon-home4"></i>
 								<span>Dashboard</span>
 							</a>
 						</li>
-						<li class="nav-item nav-item-submenu">
+						<li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
 							<a href="#" class="nav-link"><i class="icon-chart"></i> <span>Visualization</span></a>
 
 							<ul class="nav nav-group-sub" data-submenu-title="Companies">
 								<li class="nav-item"><a href="all_companies.html" class="nav-link">All Companies</a></li>
 								<li class="nav-item"><a href="amazon.html" class="nav-link">Amazon</a></li>
-								
 							</ul>
 						</li>
 						<li class="nav-item">
-							<a href="demo.html" class="nav-link">
+							<a href="index.html" class="nav-link">
 								<i class="icon-video-camera"></i>
 								<span>Demo</span>
 							</a>
@@ -217,7 +283,7 @@
 
 			</div>
 			<!-- /sidebar content -->
-			
+
 		</div>
 		<!-- /main sidebar -->
 
@@ -229,17 +295,12 @@
 			<div class="page-header">
 				<div class="page-header-content header-elements-md-inline">
 					<div class="page-title d-flex">
-						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Dashboard</span></h4>
+						<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Companies</span> - Demonstration</h4>
 						<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
 					</div>
 
 					<div class="header-elements d-none text-center text-md-left mb-3 mb-md-0">
 
-						<div class="d-flex justify-content-center">
-							<img src="../../../../global_assets/images/UB_Horizontal_SUNY_Small.png" height="25" alt="">
-										
-						</div>
-						
 					</div>
 				</div>
 			</div>
@@ -248,137 +309,50 @@
 
 			<!-- Content area -->
 			<div class="content pt-0">
-				<div class="row">
-					<div class="col-xl-6">
-						<div class="row">
 
-							<div class="col-sm-6 col-xl-4">
 
-								<!-- Sparklines in colored card -->
-								<div class="card bg-success-400 has-bg-image">
-									<div class="card-body">
-										<div class="d-flex">
-											<h3 class="font-weight-semibold mb-0">600</h3>
-											
-					                	</div>
-					                	
-					                	<div>
-											Articles Collected
-											<div class="font-size-sm opacity-75">http://commoncrawl.org</div>
-										</div>
-									</div>
+		<!-- Diagrams starts -->
 
-									<div id="sparklines_color"></div>
-								</div>
-								<!-- /sparklines in colored card -->
+		<div class="row">
 
+
+
+					<div class="col-md-6">
+
+						<div class="card">
+							<div class="card-header header-elements-inline">
+								<h6 class="card-title">Word Bubbles</h6>
 							</div>
 
-						<div class="col-sm-6 col-xl-4">
+							<div class="card-body">
 
-							<!-- Bar chart in colored card -->
-							<div class="card bg-danger-400 has-bg-image">
-								<div class="card-body">
-									<div class="d-flex">
-										<h3 class="font-weight-semibold mb-0">1,500</h3>
-				                	</div>
-				                	
-				                	<div>
-										Articles Collected
-										<div class="font-size-sm opacity-75">https://nytimes.com</div>
-									</div>
-								</div>
-
-								<div class="container-fluid">
-									<div id="chart_bar_color"></div>
-								</div>
-							</div>
-							<!-- /bar chart in colored card -->
-
-						</div>
-
-						<div class="col-sm-6 col-xl-4">
-
-							<!-- Line chart in colored card -->
-							<div class="card bg-blue-400 has-bg-image">
-								<div class="card-body">
-									<div class="d-flex">
-										<h3 class="font-weight-semibold mb-0">150,000</h3>
-
-				                	</div>
-				                	
-				                	<div>
-										Tweets Collected
-										<div class="font-size-sm opacity-75">http://twitter.com</div>
-									</div>
-								</div>
-
-								<div id="line_chart_color"></div>
-							</div>
-							<!-- /line chart in colored card -->
-
-						</div>
-
-					
-
-					</div>
-
-
-						<!-- Simple inline block with icon and button -->
-						<div class="card card-body bg-pink-400" style="background-image: url(../../../../global_assets/images/backgrounds/panel_bg.png);">
-							<div class="media align-items-center align-items-md-start flex-column flex-md-row">
-								<a href="#" class="text-white mr-md-3 mb-3 mb-md-0">
-									<i class="icon-question7 text-white-400 border-white-400 border-2 rounded-round p-2"></i>
-								</a>
-
-								<div class="media-body text-center text-md-left">
-									<h6 class="media-title font-weight-semibold">How did we process data?</h6>
-									
-									We have extensively documented the whole process, starting from data collection, infrastructure setup, stemming and counting using MapReduce, visualization, and observation. View 'Documentation' for details.
-								</div>
-
+									<div class="chart svg-center" id="all-d3-bubbles-ny"></div>
 							</div>
 						</div>
-						<!-- /simple inline block with icon and button -->
+					</div><div class="col-md-6">
+
+						<div class="card co-occ-matrix">
+							<div class="card-header header-elements-inline">
+								<h6 class="card-title">Co-Occurance Matrix</h6>
+							</div>
+
+							<div class="card-body">
+
+								<div class="chart svg-center" id="d3-matrix-ny"></div>
 
 
-				
-					</div>
-					<div class="col-xl-6">
-							
-								<!-- Top placement -->
-								<div class="card">
-									<div class="embed-responsive embed-responsive-16by9 card-img-top">
-										<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/331701920?title=0&byline=0&portrait=0" allowfullscreen frameborder="0" mozallowfullscreen></iframe>
-									</div>
-
-								</div>
-								<!-- /top placement -->
-
-					</div>
-
-
-		</div>
-
-					<!-- Radial tree layout -->
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="card">
-						<div class="card-header header-elements-inline">
-							<h5 class="card-title">Radial Tree of Keywords</h5>
-						</div>
-
-						<div class="card-body">
-
-							<div class="chart-container has-scroll">
-								<div class="chart svg-center" id="d3-tree-radial"></div>
 							</div>
 						</div>
 					</div>
+
+
 				</div>
-			</div>
-				<!-- /radial tree layout -->
+
+
+
+
+
+
 
 
 
@@ -409,6 +383,9 @@
 
 	</div>
 	<!-- /page content -->
+
+
+
 
 </body>
 </html>
